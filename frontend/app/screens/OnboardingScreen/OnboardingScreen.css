@@ -1,0 +1,66 @@
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0a0f1f;
+  align-items: center;
+  animation: backgroundColors 10s linear infinite;
+}
+@keyframes backgroundColors {
+  100% {
+    background-color: #0a0f1f;
+  }
+  30% {
+    background-color: #7b2fff;
+  }
+  100% {
+    background-color: #0a0f1f;
+  }
+}
+.title {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  font-size: 100px;
+}
+.container {
+  background-color: blue;
+  border: 5px solid black;
+  height: 300px;
+  width: 500px;
+
+  position: relative;
+  top: 100px;
+  margin: auto;
+}
+.buttonStyling {
+  background-color: green;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 15px;
+  border: none;
+
+  display: block;
+  margin: 20px auto;
+}
+#playButtonPosition {
+  position: relative;
+  top: 200px;
+  left: 10px;
+}
+.textFieldStyling {
+  height: 40px;
+  width: 220px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+
+  display: block;
+  margin: 20px auto;
+}
+.buttonStyling:hover {
+  cursor: pointer;
+}
