@@ -1,9 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 import "./OnboardingScreen.css";
 
 export const OnboardingScreen = () => {
+  const [username, setUsername] = useState("");
+
   const router = useRouter();
 
   return (
@@ -14,7 +17,13 @@ export const OnboardingScreen = () => {
           type="button"
           className="buttonStyling"
           id="playButtonPosition"
-          onClick={() => router.push("/game-session")}
+          onClick={() => {
+            if (username === "") {
+              alert("Please enter a username");
+            } else {
+              router.push("/game-session");
+            }
+          }}
         >
           Press Play
         </button>
@@ -30,6 +39,8 @@ export const OnboardingScreen = () => {
         <input
           type="text"
           className="textFieldStyling"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           id="userNameId"
           placeholder="Enter your Username"
         ></input>
