@@ -3,17 +3,17 @@
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color:#0A0F1F;
+  /* background-color:#0A0F1F; */
   align-items: center;
   animation:backgroundColors 10s  linear infinite;
     
 }
-@keyframes backgroundColors {
+/* @keyframes backgroundColors {
   100%{background-color:#0A0F1F;}
    30%{background-color:#7B2FFF;}
-   100%{background-color:#0A0F1F;}
+   100%{background-color:#0A0F1F;} */
 
-}
+/* } */
 .title{
   position:relative;
   top:180px;
@@ -22,7 +22,7 @@
 
 }
 .container {
-  background-color: blue;
+  /* background-color: blue; */
   border: 5px solid black;
   height: 300px;
   width: 500px;
