@@ -4,9 +4,18 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import "./DrawingCanvas.css";
 
 const COLORS = [
-  "#000000", "#ffffff", "#ef4444", "#f97316", "#eab308",
-  "#22c55e", "#3b82f6", "#8b5cf6", "#ec4899", "#14b8a6",
-  "#6b7280", "#92400e",
+  "#000000",
+  "#ffffff",
+  "#ef4444",
+  "#f97316",
+  "#eab308",
+  "#22c55e",
+  "#3b82f6",
+  "#8b5cf6",
+  "#ec4899",
+  "#14b8a6",
+  "#6b7280",
+  "#92400e",
 ];
 
 const STROKE_SIZES = [2, 6, 12, 24];
@@ -68,7 +77,7 @@ export const DrawingCanvas = () => {
 
       lastPos.current = pos;
     },
-    [color, strokeSize, tool]
+    [color, strokeSize, tool],
   );
 
   const stopDrawing = useCallback(() => {
@@ -92,7 +101,9 @@ export const DrawingCanvas = () => {
 
     const resize = () => {
       const { width, height } = container.getBoundingClientRect();
-      const imageData = canvas.getContext("2d")?.getImageData(0, 0, canvas.width, canvas.height);
+      const imageData = canvas
+        .getContext("2d")
+        ?.getImageData(0, 0, canvas.width, canvas.height);
       canvas.width = width;
       canvas.height = height;
       const ctx = canvas.getContext("2d");
@@ -150,7 +161,11 @@ export const DrawingCanvas = () => {
           >
             🧹
           </button>
-          <button className="tool-btn clear-btn" onClick={clearCanvas} title="Clear">
+          <button
+            className="tool-btn clear-btn"
+            onClick={clearCanvas}
+            title="Clear"
+          >
             🗑️
           </button>
         </div>
@@ -161,7 +176,10 @@ export const DrawingCanvas = () => {
               key={c}
               className={`color-swatch ${color === c && tool === "pen" ? "selected" : ""}`}
               style={{ backgroundColor: c }}
-              onClick={() => { setColor(c); setTool("pen"); }}
+              onClick={() => {
+                setColor(c);
+                setTool("pen");
+              }}
             />
           ))}
         </div>
