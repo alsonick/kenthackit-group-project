@@ -18,7 +18,13 @@ export const OnboardingScreen = () => {
         >
           Press Play
         </button>
-        <button type="button" className="buttonStyling">
+        <button
+          type="button"
+          className="buttonStyling"
+          onClick={() => {
+            return router.push("/private");
+          }}
+        >
           Private Room
         </button>
         <input
