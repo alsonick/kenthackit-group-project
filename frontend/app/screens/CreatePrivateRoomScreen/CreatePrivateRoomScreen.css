@@ -1,0 +1,89 @@
+.mainContent{
+  background-color: rgb(29, 9, 42);
+  width: 950px;
+  height: 640px;
+  position: relative;
+  top: 65px;
+  right: 20px;
+}
+.innerContent{
+    background-color: rgb(87, 61, 61);
+    width: 710px;
+    height: 500px;
+    position: relative;
+    left: 120px;;
+    top: 70px;;
+}
+/* .timer{
+   
+    stroke:red;
+    stroke-width: 10px;
+} */
+
+
+/* .circle {
+    width:80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: white;
+    border-color:red;
+    border-width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    left: 620px;
+} */
+ .numberFieldStyling{
+ background-color:white;
+ position: relative;
+ left: 200px;
+ top: 145px;
+ width: 130px;
+ height: 40px;;
+ border-radius:10px;
+text-align: center;
+font-size: larger;
+}
+.stylingnumberfieldText{
+position: relative;
+left: 150px;;
+top: 150px;
+font-size:40px;
+}
+.roundFieldStyling{
+background-color:white;
+ position: relative;
+ right: 79px;
+ top: 235px;
+  width: 130px;
+ height: 40px;
+ border-radius:10px;
+text-align: center;
+font-size: larger;
+}
+.noOfRoundstext{
+position: relative;
+right: 190px;
+top: 240px;  
+font-size:40px;
+}
+.inviteButtonStyling{
+background-color:green;
+ width: 130px;
+ height: 40px;
+border-radius:10px;
+text-align: center;
+font-size: 25px;
+color:white;
+font: bold;
+position: relative;
+top: 290px;
+left: 260px;;
+}
+.inviteButtonStyling:hover{
+cursor: pointer;
+}
+
