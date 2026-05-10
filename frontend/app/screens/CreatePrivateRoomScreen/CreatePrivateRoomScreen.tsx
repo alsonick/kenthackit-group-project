@@ -2,12 +2,15 @@
 
 import "./CreatePrivateRoomScreen.css";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export const CreatePrivateRoomScreen = () => {
+  const router = useRouter();
   const [timer, setTimer] = useState({t: 30}); 
   const [numOfPlayers, setNumOfPlayers] = useState(2);
   const [buttonText, setButtonText] = useState("Invite Link");
   const [rounds, setRounds] = useState(1);
+  const [showStartButton, setShowStartButton] = useState(false);
 
 
   // function timerCountdown() {
@@ -37,10 +40,11 @@ export const CreatePrivateRoomScreen = () => {
        }}></input>
        <label htmlFor="noOfRounds" className="noOfRoundstext">Rounds:</label>
        <input type="number" id="round" name="round" className="roundFieldStyling" min="1" max="10" value={rounds} onChange={e => setRounds(parseInt(e.target.value))}></input>
+      <button type ="button" id="backButton" className="backGameButtonStyling" onClick={() => router.back()}>Back</button>
        <button type="button" id="invitelink" className="inviteButtonStyling" onClick={async () => {
-        // Generate a unique room ID (for now, using timestamp + random)
         const roomId = Date.now().toString() + Math.random().toString(36).substr(2, 9);
         const inviteLink = `${window.location.origin}/game-session?room=${roomId}`;
+        setShowStartButton(true);
         
         try {
           await navigator.clipboard.writeText(inviteLink);
@@ -55,7 +59,10 @@ export const CreatePrivateRoomScreen = () => {
             setButtonText("Invite Link");
           }, 2000);
         }
-       }}>{buttonText}</button>
+      }}>{buttonText}</button>
+      {showStartButton && (
+        <button type="button" id="startgameButton" className="startGameButtonStyling" style={{ display: 'block' }}>Start Game</button>
+      )}
       {/* <div className="circle">
         <p>{timer.t}</p>
   
