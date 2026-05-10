@@ -1,0 +1,240 @@
+.mainContent{
+  background: linear-gradient(-45deg, rgb(29, 9, 42), rgb(50, 20, 60), rgb(29, 9, 42), rgb(40, 15, 50));
+  background-size: 400% 400%;
+  width: 950px;
+  height: 640px;
+  position: relative;
+  top: 65px;
+  right: 20px;
+  animation: gradientShift 8s ease infinite, fadeIn 0.8s ease-in;
+}
+
+.innerContent{
+    background: linear-gradient(135deg, rgb(87, 61, 61), rgb(110, 75, 85), rgb(87, 61, 61), rgb(100, 70, 75));
+    background-size: 400% 400%;
+    width: 710px;
+    height: 500px;
+    position: relative;
+    left: 120px;;
+    top: 70px;;
+    animation: gradientShift 10s ease infinite, slideUp 0.8s ease-out;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .timer{
+   
+    stroke:red;
+    stroke-width: 10px;
+} */
+
+
+/* .circle {
+    width:80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: white;
+    border-color:red;
+    border-width: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center  ;
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    left: 620px;
+} */
+ .numberFieldStyling{
+ background-color:white;
+ position: relative;
+ left: 200px;
+ top: 145px;
+ width: 130px;
+ height: 40px;;
+ border-radius:10px;
+text-align: center;
+font-size: larger;
+animation: fadeIn 1s ease-out 0.2s both;
+transition: all 0.3s ease;
+}
+
+.numberFieldStyling:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(144, 238, 144, 0.5);
+  transform: scale(1.02);
+}
+
+.stylingnumberfieldText{
+position: relative;
+left: 150px;;
+top: 150px;
+font-size:40px;
+color: white;
+animation: fadeIn 1s ease-out 0.1s both;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(200, 150, 255, 0.2), rgba(255, 255, 255, 0.1));
+background-size: 200% 200%;
+padding: 8px 12px;
+border-radius: 8px;
+animation: fadeIn 1s ease-out 0.1s both, textGlow 4s ease-in-out infinite;
+}
+
+.roundFieldStyling{
+background-color:white;
+ position: relative;
+ right: 100px;
+ top: 235px;
+  width: 130px;
+ height: 40px;
+ border-radius:10px;
+text-align: center;
+font-size: larger;
+animation: fadeIn 1s ease-out 0.4s both;
+transition: all 0.3s ease;
+}
+
+.roundFieldStyling:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(144, 238, 144, 0.5);
+  transform: scale(1.02);
+}
+
+.noOfRoundstext{
+position: relative;
+right: 190px;
+top: 240px;  
+font-size:40px;
+color: white;
+animation: fadeIn 1s ease-out 0.3s both;
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(200, 150, 255, 0.2), rgba(255, 255, 255, 0.1));
+background-size: 200% 200%;
+padding: 8px 12px;
+border-radius: 8px;
+animation: fadeIn 1s ease-out 0.3s both, textGlow 4s ease-in-out infinite 0.2s;
+}
+
+@keyframes textGlow {
+  0%, 100% {
+    background-position: 0% 50%;
+    text-shadow: 0 0 5px rgba(200, 150, 255, 0.3);
+  }
+  50% {
+    background-position: 100% 50%;
+    text-shadow: 0 0 15px rgba(200, 150, 255, 0.6);
+  }
+}
+
+.inviteButtonStyling{
+background-color:green;
+ width: 130px;
+ height: 40px;
+border-radius:10px;
+text-align: center;
+font-size: 25px;
+color:white;
+font: bold;
+position: relative;
+top: 290px;
+left: 150px;
+animation: fadeIn 1s ease-out 0.5s both;
+transition: all 0.3s ease;
+}
+
+.inviteButtonStyling:hover{
+cursor: pointer;
+background-color: #32cd32;
+box-shadow: 0 4px 12px rgba(50, 205, 50, 0.4);
+transform: translateY(-2px);
+}
+
+.inviteButtonStyling:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(50, 205, 50, 0.3);
+}
+
+.backGameButtonStyling{
+ background-color:green;
+ width: 130px;
+ height: 40px;
+border-radius:10px;
+text-align: center;
+font-size: 25px;
+color:white;
+font: bold;
+position: relative;
+top: 380px;
+left: 20px;
+animation: fadeIn 1s ease-out 0.6s both;
+transition: all 0.3s ease;
+}
+
+.backGameButtonStyling:hover{
+cursor: pointer;
+background-color: #228b22;
+box-shadow: 0 4px 12px rgba(34, 139, 34, 0.4);
+transform: translateY(-2px);
+}
+
+.backGameButtonStyling:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(34, 139, 34, 0.3);
+}
+
+.startGameButtonStyling{
+ background-color:green;
+ width: 130px;
+ height: 40px;
+border-radius:10px;
+text-align: center;
+font-size: 25px;
+color:white;
+font: bold;
+position: relative;
+top: 320px;
+left: 280px;
+display: none;
+animation: slideUp 0.6s ease-out both;
+transition: all 0.3s ease;
+}
+
+.startGameButtonStyling:hover {
+  cursor: pointer;
+  background-color: #1aa01a;
+  box-shadow: 0 4px 12px rgba(26, 160, 26, 0.4);
+  transform: translateY(-2px);
+}
+
+.startGameButtonStyling:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(26, 160, 26, 0.3);
+}
