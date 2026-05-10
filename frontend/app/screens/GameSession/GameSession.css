@@ -32,6 +32,23 @@
   color: rgba(226, 232, 240, 0.78);
 }
 
+.exit-button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ef4444, #f97316);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.exit-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(239, 68, 68, 0.2);
+}
+
 .session-stats {
   display: flex;
   gap: 12px;

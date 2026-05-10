@@ -1,6 +1,8 @@
 .layout-container {
   display: flex;
   flex-direction: column;
+}
+
 .onboarding-shell {
   width: min(960px, calc(100vw - 32px));
   display: grid;

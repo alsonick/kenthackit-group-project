@@ -222,7 +222,6 @@ font: bold;
 position: relative;
 top: 320px;
 left: 280px;
-display: none;
 animation: slideUp 0.6s ease-out both;
 transition: all 0.3s ease;
 }
